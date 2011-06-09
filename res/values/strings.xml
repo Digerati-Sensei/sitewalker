@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, SiteWalker!</string>
+    <string name="app_name">Site Walker</string>
+    <string name="welcome_text">Welcome to Site Walker!</string>
+    <string name="login_text">Please log in below to begin.</string>
+    <string name="login_id_label">Email Address</string>
+    <string name="login_pw_label">Password</string>
+    <string name="login_button">Login</string>
+    <string name="mapper_label">Mapper View</string>
+    <string name="projects_label">Project List</string>
+    <string name="menu_zoom">Zoom</string>
+    <string name="menu_pan">Pan</string>
+    <string name="menu_reset">Reset</string>
+    <string name="menu_select">Select</string>
+</resources>
