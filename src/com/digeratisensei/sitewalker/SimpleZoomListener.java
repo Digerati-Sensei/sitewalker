@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.digeratisensei.sitewalker.classes.Reading;
+
 public class SimpleZoomListener implements View.OnTouchListener {
 	
 	public enum ControlType {
@@ -28,7 +30,7 @@ public class SimpleZoomListener implements View.OnTouchListener {
 
     private void openStrengths(Context context) {
     	Intent ssIntent = new Intent();
-    	ssIntent.setClass(context, MySignalStrength.class);
+    	ssIntent.setClass(context, Reading.class);
     	context.startActivity(ssIntent);
     }
     public boolean onTouch(View v, MotionEvent event) {

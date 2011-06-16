@@ -15,8 +15,7 @@ public class SiteWalker extends Activity {
         Button button = (Button)findViewById(R.id.login_button);
         button.setOnClickListener(new View.OnClickListener() {
 	        public void onClick(View v) {
-	    		/** Context context = getApplicationContext(); */
-	        	//Intent projectIntent = new Intent(v.getContext(), ImageUpload.class);
+	    		//Intent projectIntent = new Intent(v.getContext(), ImageUpload.class);
 	        	Intent projectIntent = new Intent(v.getContext(), Projects.class);
 	        	startActivityForResult(projectIntent, 0);
 	        }

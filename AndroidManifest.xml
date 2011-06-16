@@ -20,8 +20,9 @@
             </intent-filter>
         </activity>
 		<activity android:name=".Mapper"></activity>
+		<activity android:name=".Post"></activity>
 		<activity android:name=".Projects"></activity>
-		<activity android:name=".MySignalStrength"></activity>
-		<activity android:name=".ImageUpload"></activity>
+		<activity android:name=".Reading"></activity>
+		<service android:name=".GatherReadings"></service>
     </application>
 </manifest>

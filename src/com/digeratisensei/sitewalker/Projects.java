@@ -28,5 +28,6 @@ public class Projects extends Activity {
 	        	startActivityForResult(mapperIntent, 0);
 	        }
         });
+        startService(new Intent(Projects.this,GatherReadings.class));
     }
 }
