@@ -21,4 +21,9 @@ public class SiteWalker extends Activity {
 	        }
         });
     }
+    @Override
+    public void onDestroy() {
+    	super.onDestroy();
+    	stopService(new Intent(this, GatherReadings.class));
+    }
 }

@@ -32,7 +32,6 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 
-import com.digeratisensei.couchdb.Post;
 
 public class ImageUpload extends Activity {
 	final int CAMERA_PIC_REQUEST = 1337;

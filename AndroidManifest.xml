@@ -24,5 +24,6 @@
 		<activity android:name=".Projects"></activity>
 		<activity android:name=".Reading"></activity>
 		<service android:name=".GatherReadings"></service>
+		<service android:name=".Post"></service>
     </application>
 </manifest>

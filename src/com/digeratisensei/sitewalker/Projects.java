@@ -30,4 +30,9 @@ public class Projects extends Activity {
         });
         startService(new Intent(Projects.this,GatherReadings.class));
     }
+    @Override
+    public void onDestroy() {
+    	super.onDestroy();
+    	stopService(new Intent(this, GatherReadings.class));
+    }
 }
