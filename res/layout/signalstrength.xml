@@ -14,9 +14,11 @@
 		android:layout_height="wrap_content"
 		android:id="@+id/textOut"
 		android:text="Output"></TextView>
-	<TextView
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/cellOut"
-		android:text="Cell Output"></TextView>
+	<Button 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content" 
+		android:text="Projects" 
+		android:id="@+id/projects"
+		android:focusable="false">
+	</Button>	
 </LinearLayout>

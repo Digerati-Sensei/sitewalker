@@ -13,4 +13,6 @@
     <string name="menu_pan">Pan</string>
     <string name="menu_reset">Reset</string>
     <string name="menu_select">Select</string>
+    <string name="building_prompt">Select Building</string>
+    <string name="floor_prompt">Select Floor</string>
 </resources>

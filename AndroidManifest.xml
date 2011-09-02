@@ -9,8 +9,11 @@
       android:anyDensity="true" />
 	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
 	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
-	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
-    <application android:icon="@drawable/icon" android:label="@string/app_name">
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:theme="@android:style/Theme.NoTitleBar">
+    	<uses-library android:name="com.google.android.maps" />
         <activity android:name=".SiteWalker"
                   android:label="@string/app_name"
                   android:exported="true">
@@ -19,11 +22,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-		<activity android:name=".Mapper"></activity>
-		<activity android:name=".Post"></activity>
+		<activity android:name=".Map"></activity>
 		<activity android:name=".Projects"></activity>
-		<activity android:name=".Reading"></activity>
-		<service android:name=".GatherReadings"></service>
+		<activity android:name=".Mapper"></activity>
+		<activity android:name=".LevelChooser"></activity>
+		<activity android:name=".BuildingChooser"></activity>
+		<activity android:name=".MySignalStrength"></activity>
+		<service android:name=".GatherReadings"
+				android:enabled="true"
+				android:exported="true"></service>
+		<service android:name=".GatherLocation"
+				android:enabled="true"
+				android:exported="true"></service>
 		<service android:name=".Post"></service>
+		<service android:name="com.couchbase.libcouch.CouchService" 
+                 android:enabled="true" 
+                 android:exported="false"></service>
     </application>
 </manifest>

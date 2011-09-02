@@ -17,11 +17,7 @@ import org.json.JSONTokener;
 
 import android.app.IntentService;
 import android.content.Intent;
-import android.os.Bundle;
-
-import com.google.gson.Gson;
-
-
+import android.util.Log;
 
 public class Post extends IntentService {
 	
@@ -31,25 +27,26 @@ public class Post extends IntentService {
 	}
 
 	private static final String TAG = "Post";
-	private Bundle reading;
-	private Bundle phone;
 	private HttpClient httpclient = new DefaultHttpClient();
-	private String postURL = "http://seansummers.couchone.com/tracker/";
+	private String postUrl;
 	
 	protected void onHandleIntent(Intent intent) {
-		phone = new Bundle(intent.getBundleExtra("phone"));
-		reading = new Bundle(intent.getBundleExtra("reading"));
-		postReading(reading);
+		try {
+			String pObj = new String(intent.getStringExtra("post"));
+			postUrl = new String(intent.getStringExtra("url"));
+			postReading(pObj);
+		} catch (NullPointerException e) {
+			e.printStackTrace();
+		}
 	}
 	
-	private JSONObject postReading(Bundle data) {
-		HttpPost post = new HttpPost(postURL);
+	private JSONObject postReading(String data) {
+		Log.i(TAG, data);
+		HttpPost post = new HttpPost(postUrl);
 	    post.setHeader("Accept", "application/json");
 	    post.addHeader("Content-type", "application/json;charset=UTF-8");
-	    Gson gson = new Gson();
-	    String json = gson.toJson(data);
 	    try {
-			post.setEntity(new StringEntity(json));
+			post.setEntity(new StringEntity(data));
 		} catch (UnsupportedEncodingException e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
@@ -81,7 +78,9 @@ public class Post extends IntentService {
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (NullPointerException e) {
+			e.printStackTrace();
 		}
 		return jsonobject;
-	}		
+	}
 }

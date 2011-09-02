@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/relLayout1"
 	android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-	<com.digeratisensei.sitewalker.ImageZoomView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/zoomview"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    />
-         
-</LinearLayout>
+    >    
+</FrameLayout>

@@ -10,5 +10,8 @@
 	<classpathentry exported="true" kind="lib" path="/home/bryan/Downloads/google-gson-1.7.1/gson-1.7.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="/home/bryan/Downloads/google-gson-1.7.1/gson-1.7.1-javadoc.jar"/>
 	<classpathentry exported="true" kind="lib" path="/home/bryan/Downloads/google-gson-1.7.1/gson-1.7.1-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="/LibCouch/lib/commons-compress-1.0.jar"/>
+	<classpathentry kind="lib" path="/LibCouch/lib/commons-io-2.0.1.jar"/>
+	<classpathentry kind="src" path="LibCouch_src"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
